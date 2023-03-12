@@ -14,7 +14,7 @@ class Pizza:
     def get_cost(self):
         raise NotImplementedError("Subclasses must implement get_cost()")
 
-# Class freelancer inherits EMP
+
 
 
 class ClassicPizza(Pizza):
