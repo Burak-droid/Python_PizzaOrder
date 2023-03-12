@@ -41,9 +41,9 @@ class TurkPizza(Pizza):
         return 14.85
 
 
-class DominosPizza(Pizza):
+class PlainPizza(Pizza):
     def __init__(self):
-        super().__init__("Dominos Pizza")
+        super().__init__("Plain Pizza")
 
     def get_cost(self):
         return 15.78
@@ -118,7 +118,7 @@ def main():
         margherita_pizza = MargheritaPizza()
         classic_pizza = ClassicPizza()
         Turk_pizza = TurkPizza()
-        Dominos_pizza = DominosPizza()
+        Dominos_pizza = PlainPizza()
         olives = Olives()
         mushroom = Mushrooms()
         goatCheese = GoatCheese()
@@ -182,13 +182,13 @@ def main():
             print(total_count)
             y = corn.get_description()
         Name = input("please enter the name: ")
-        Tc_No = int(input("please enter the TC no: "))
+        Id_number = int(input("please enter the ID number: "))
         Credit_card_no = int(input("please enter the credit card no: "))
         Credit_card_password = int(
             input("please enter the credit card password: "))
         a = csv.writer(fp, delimiter=',')
-        data = [['Name', 'Credit No', 'Credit Card Password', 'Pizza Type', 'Sauce Type', 'Total Cost', 'time'],
-                [Name, Credit_card_no, Credit_card_password, x, y, total_count, current_time,
+        data = [['Name', 'ID number', 'Credit No', 'Credit Card Password', 'Pizza Type', 'Sauce Type', 'Total Cost', 'time'],
+                [Name, Id_number, Credit_card_no, Credit_card_password, x, y, total_count, current_time,
                  ],
                 ]
         a.writerows(data)
